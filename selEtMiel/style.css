@@ -16,3 +16,9 @@ footer{
     background-color: black;
     color: white;
 }
+
+.carte {
+    border: 1px;
+    border-color: blanchedalmond;
+    border-style: solid;
+}

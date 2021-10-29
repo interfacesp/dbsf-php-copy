@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
 
-    <title>Sel et Miel  <?php //code ici ?> </title>
+    <title>Sel et Miel   </title>
 </head>
 <body>
     <header>
@@ -15,47 +15,65 @@
 
     <h1>Bienvenue chez Sel et Miel</h1>
    
- 
+    <p>
+            Dernier rafraîchissement de la page: 
+            <?php 
+                //On définit le fuseau horaire par défaut
+                date_default_timezone_set('Europe/Brussels');
+
+                // Date du jour au format: jour-mois-année Heure:minute:secondes
+                //https://www.php.net/manual/fr/function.date
+                $dateDuJour = date('d-m-Y H:i:s');
+                echo  $dateDuJour;
+            ?>
+    </p>
+
+
     
-    <?php
-        //Code PHP ici
+    <div class="carte">
+       
+        <ul>
 
+            <?php
+                
+                //exemple avec fonction
+                $menu = geMenu();  
+                $nombreGlaces = count($menu); 
+                for($i= 0; $i <$nombreGlaces ; $i++){
+                echo  "<li>". $menu[$i][0]." ------". $menu[$i][1] ."</li>";
+                }
 
+            ?>
+
+        </ul>
         
-        $menu = [
-            ["pistache", 10],
-            ["fraise", 9],
-            ["vanille", 11],
-            ["framboise", 9],
-            ["caramel", 12]
-        ];
-        
-        $nombreGlaces = count($menu); 
-        $weHaveIceCreams= $nombreGlaces > 0;
-        echo "<ul>";
-    
-
-         for($i= 0; $i <$nombreGlaces ; $i++){
-           echo  "<li>". $menu[$i][0]." ------". $menu[$i][1] ."</li>";
-        }
-
-     echo "</ul>";
-    
-        
-        
-
-        
-
-
-
-    ?> 
+    </div>
 
     <footer>
-            Tél: +32422
-            Adresse: De l'autre côté du parc
-        
+           Infos de contact ici
     </footer>
 
     <?php //code ici?>
 </body>
 </html>
+
+
+<?php 
+
+/**
+ *      Construction du menu
+ */
+function geMenu(){
+    return
+    [
+        ["pistache", 10],
+        ["fraise", 9],
+        ["vanille", 11],
+        ["framboise", 9],
+        ["caramel", 12],
+        ["Crêpe spéciale", 12]
+
+    ];
+}
+
+?>
