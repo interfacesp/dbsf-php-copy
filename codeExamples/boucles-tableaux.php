@@ -114,11 +114,14 @@ $ficheIdentite= [
 ];
 
 //Affiche Gahungere
-echo $ficheIdentite['nom']; 
+echo $ficheIdentite['nom']. "<br/>"; 
 
 //Affiche 18
-echo $ficheIdentite['age'];
+echo $ficheIdentite['age']. "<br/>";
 
+// Ajout d'une nouvelle clé et valeur
+$ficheIdentite['hobby'] = "danse";
+echo "Après ajout nouvelle clé 'hobby' : ". $ficheIdentite['hobby']. "<br/>"; 
 
   $menu = [
                 ['nom' => 'sarrasin',

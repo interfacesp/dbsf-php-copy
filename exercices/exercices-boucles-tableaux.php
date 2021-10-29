@@ -81,23 +81,27 @@ for($pos2 = 0; $pos2 < $tailleCrepes; $pos2 = $pos2 + 2){
    * $menu=   [
    *                ['sarrasin', 10],
    *                ['mikado', 12]
-   *    *           ['chocolat', 15]
+   *               ['chocolat', 15]
    * 
    *          ]
-   *  echo "Le prix de ". $menu[1][0]. " est ". $menu[1][1];  
-   *  // Le prix de mikado est 12
    *   
    * // Exemple avec boucle : 
    *    for (...) {
    *          ... $menu[$index][0] ... $menu[$index][1]
    *      }
-   *  // Voir correction de Valentina dans
-   * // le canal "PHP-Initiation... > Files " 
+   * 
    * 
    */
+   $monMenu = [
+            ['sarrasin', 10],
+            ['mikado', 12],
+            ['chocolat', 15]
+   ];
 
-
-   
+   $tailleMenu = count($monMenu);
+   for ($indice=0; $indice < $tailleMenu; $indice++) { 
+      echo "Le prix de la  crêpe ". $monMenu[$indice][0]. " est de ". $monMenu[$indice][1]. " EUR </br>";
+   }
 
    /**
     * Exercice 4 - Tableaux associatifs 

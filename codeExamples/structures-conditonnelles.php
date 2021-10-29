@@ -1,5 +1,6 @@
 <?php
 
+//On peut définir des constantes
 define("RETOUR_LIGNE", "<br/>");
 define("CAPACITE_MAX", 10);
 
@@ -88,21 +89,6 @@ echo "<ul>
       }
       
       echo "Resultat Score: ". $final.RETOUR_LIGNE; 
-
-
-
-      // if($scoreResto == 0) {
-      //    $final = "Vos crêpes ne sont pas bonnes"; 
-      // }else if($scoreResto == 1) {
-      //    $final = "Bof";
-      // } elseif ($scoreResto == 2){
-        
-      // }
-    
-
-    
-
-  
 
 
 ?> 

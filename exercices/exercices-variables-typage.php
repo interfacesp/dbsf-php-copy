@@ -5,8 +5,8 @@
     * Afficher "Bienvenue chez Sel & Miel" 
     */
 
-    echo "Bienvenue Chez Sel & Miel"; 
-    echo 'Bienvenue Chez Sel & Miel'; 
+    echo "Bienvenue Chez Sel & Miel <br/>"; 
+    echo 'Bienvenue Chez Sel & Miel <br/> '; 
 
     /**
     * Exercice 2
@@ -15,6 +15,8 @@
     *  "Sel & Miel" étant contenue dans une variable 
     */
 
+    $nom = "Sel & Miel";
+    echo "Bienvenue chez ". $nom.  "<br/>";
     
     /**
      * 
@@ -35,12 +37,20 @@
      */
 
 
+     $bienvenue  = "Bienvenue"; 
+     $nom = "Chez Sel & Miel"; 
+     echo $bienvenue." ". $nom. " <br/>";  
+
     /**
      * 
     * Exercice 4 
     * Afficher le nom d'une crêpe et son prix, en utlisant des variables
     *  exemple: Crêpe aux Fraises: 9 EUR
     */
+
+    $prix =9;
+    $nomCrepe ="Crêpe aux Fraises"; 
+    echo $nomCrepe. " : " .  $prix. " EUR <br/>";
 
     /**
      * Exercice 5 
@@ -55,16 +65,30 @@
      * 
      */
 
-     /**
-      * Exercice 6
-      * 
-      *  Crêpes Sucre: 10 eur
-      *  Crêpe Mikado : 15 eur (réduction)
-      *  Crêpe Chocolat: 21 eur (réduction)
-      *  
-      *  Afficher un message de "Réduction" à côté 
-      * des crêpes de prix impair
-      */
+     $tauxTVA= 0.06;
+     
+     $fraise = "crêpe aux fraises"; 
+     $prixHtvaFraise= 9;
+     $prixTVACFraise= $prixHtvaFraise + ($prixHtvaFraise * $tauxTVA);
+     
+     $sucre = "crêpe au sucre"; 
+     $prixHtvaSucre = 10;
+     $prixTVACsucre = $prixHtvaSucre + ($prixHtvaSucre * $tauxTVA);
+
+     $oeufs = "crêpe aux oeufs"; 
+    //Mais attends, une crêpe, c'est d'office avec des oeufs,non?
+    //oui, mais on peut faire ce qu'on veut :D  
+     $prixHtvaOeufs= 20;
+     $prixTVACoeufs = $prixHtvaOeufs + ($prixHtvaOeufs * $tauxTVA);
+    
+    echo $fraise . " " . $prixHtvaFraise . " EUR (HTVA)  -- " . $prixTVACFraise . " EUR (TVAC) <br/>"; 
+
+    echo $sucre . " " . $prixHtvaSucre . " EUR (HTVA)  -- " . $prixTVACsucre . " EUR (TVAC) <br/>"; 
+
+    echo $oeufs . " " . $prixHtvaOeufs . " EUR (HTVA) ---" . $prixTVACoeufs . " EUR (TVAC) <br/>"; 
+
+
+
 
 
 ?>
