@@ -1,0 +1,26 @@
+Objectif: ajouter un sytème d'authentification sur le site Sel et Miel 
+
+    utilisateur connecté ? 
+        oui: affiche page accueil 
+        non: affiche formulaire de connexion
+
+    Formulaire de connexion: login.php 
+        - champ type texte
+        - champe type password
+        - bouton type 'submit' => 'se connecter'
+        - traitement de l'action => page accueil: index.php
+
+
+    Registre d'utilisateurs pouvant se connecter 
+
+            - Tableau associatif contenant liste des utilisateurs autorisés/enregistrés 
+
+
+    Page d'accueil: home.php 
+
+            - Celle qu'on affichera si l'utilisateur est connecté 
+
+    
+
+
+
