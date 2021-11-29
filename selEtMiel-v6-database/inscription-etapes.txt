@@ -1,0 +1,25 @@
+1. Création d'une page "inscription-user.php"
+
+Dans cette page: 
+
+ a. cadre - balisage Html (exemple: <DOCTYPE Html ...>)
+
+ b. Création formulaire avec les champs 
+    - Nom d'utilisateur 
+    - password
+    - Nom (optionnel)
+    - Prenom (optionnel)
+
+2. Mettre un nouveau lien dans fichier login.php
+    -> vers page d'inscription
+
+3. Modifier base données dans MySQL
+    - création (si ce n'est déjà fait) nouvelle table 'utilisateurs' avec champs  
+        * username - clé primaire
+        * password
+        * Nom (optionnel - NULL)
+        * Preno (optionnel - NULL)
+
+4. création d'une fonction qui va insérer un nouvel utilisateur dans la base de données
+    
+

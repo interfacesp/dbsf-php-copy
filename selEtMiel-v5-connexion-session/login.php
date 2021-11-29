@@ -15,7 +15,7 @@
     </div>
     
     <div>
-        <input type="submit" value="Envoyer">
+        <input type="submit" value="Se Connecter">
     </div>
 
 </form>

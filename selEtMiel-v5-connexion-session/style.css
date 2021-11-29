@@ -1,6 +1,11 @@
 body {
     text-align: center;
+    background-image: url('https://sel-miel.be/img/sel&miel.jpg');
+    /* background-repeat: no-repeat; */
+    color: white;
 }
+
+
 
 img {
     width: 300px;
@@ -56,4 +61,8 @@ nav a:hover
 
 .error {
     color: red;
+}
+
+.droite {
+    text-align: right;
 }

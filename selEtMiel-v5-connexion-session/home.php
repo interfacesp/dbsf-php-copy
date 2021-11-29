@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 include_once 'users.php';
 
@@ -11,15 +12,18 @@ if(isset($_POST['username']) && isset($_POST['password'])){
     $passwordUtilisateur = $_POST['password'];
      
     
-    for($i=0; $i <count($users); $i++){
+    for($i=0; $i < count($users); $i++){
 
         if($users[$i]['username'] == $nomUtilisateur
          &&   $users[$i]['password'] == $passwordUtilisateur ){
-             $isLogged = true;
+             $_SESSION['LOGGED_USER'] = $users[$i]['username']; 
+            //  $_SESSION['LOGGED_USER'] = $nomUtilisateur;
          }
     }
 
 }
+
+$isLogged = isset($_SESSION['LOGGED_USER']) && !empty($_SESSION['LOGGED_USER']); 
 
 ?>
 
@@ -42,23 +46,25 @@ if(isset($_POST['username']) && isset($_POST['password'])){
     <?php include_once 'header.php';  ?>
 
     <p>
-        Bienvenue sur la page principale !   
+        Bienvenue sur la page principale, <?php echo $_SESSION['LOGGED_USER']; ?>!   
     </p>
 
     <?php include_once 'footer.php' ;  ?>
 
 <?php  else: ?>
+    <div class="login">
+        
+        <div class="error"> 
+                <?php  
+                    if($isLoginAttempt) {
+                        echo "Le mot de passe ou le nom d'utilisateur est incorrect ";
+                    }
+                ?>
+        </div>
 
-    <div class="error"> 
-            <?php  
-                if($isLoginAttempt) {
-                    echo "Le mot de passe ou le nom d'utilisateur est incorrect ";
-                }
-            ?>
+        <?php include_once 'login.php'; ?>
+
     </div>
-
-    <?php include_once 'login.php'; ?>
-
 <?php endif; ?>
    
 </body>

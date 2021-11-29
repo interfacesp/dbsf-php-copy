@@ -1,0 +1,68 @@
+body {
+    text-align: center;
+    background-image: url('https://sel-miel.be/img/sel&miel.jpg');
+    /* background-repeat: no-repeat; */
+    color: white;
+}
+
+
+
+img {
+    width: 300px;
+    display: block;
+    margin: auto;
+}
+
+ul{
+    list-style-type : none;
+}
+
+
+
+.carte {
+    border: 1px;
+    border-color: blanchedalmond;
+    border-style: solid;
+}
+
+/* Navigation - code OpenClassRooms */
+
+.navigation {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul
+{
+    list-style-type: none;
+    display: flex;
+}
+
+nav li
+{
+    margin-right: 15px;
+}
+
+nav a
+{
+    font-size: 1.3em;
+    color: #181818;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+nav a:hover
+{
+    color: #760001;
+    border-bottom: 3px solid #760001;
+}
+
+/* ------------------ */
+
+.error {
+    color: red;
+}
+
+.droite {
+    text-align: right;
+}
