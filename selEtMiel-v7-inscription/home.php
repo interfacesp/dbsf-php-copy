@@ -1,5 +1,5 @@
 <?php
-session_start();
+$sessionOK = session_start();
 
 include_once 'database/mysql.php';
 
@@ -25,13 +25,14 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         if($unUtilisateur['username'] == $nomUtilisateur
          &&   $unUtilisateur['password'] == $passwordUtilisateur ){
              $_SESSION['LOGGED_USER'] = $unUtilisateur['username']; 
-            //  $_SESSION['LOGGED_USER'] = $nomUtilisateur;
+            //  $_SESSION['LOGGED_USER  '] = $nomUtilisateur;
          }
     }
 
 }
 
-$isLogged = isset($_SESSION['LOGGED_USER']) && !empty($_SESSION['LOGGED_USER']); 
+$isLogged = isset($_SESSION['LOGGED_USER']) && !empty($_SESSION['LOGGED_USER']);
+
 
 ?>
 

@@ -1,6 +1,7 @@
 <?php
 
 include_once 'database/mysql.php';
+include_once 'functions.php';
 /**
  * Inclusion des fichiers nécessaires. De quoi a-t-on besoin? 
  * 
@@ -22,19 +23,17 @@ include_once 'database/mysql.php';
     <?php
            $is_registered = false;
 
-           if(isset($_POST['username']) && isset($_POST['password'])){
+           if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['age'])){
 
             $nomUtilisateur = $_POST['username'];
             $passwd= $_POST['password']; 
     
-            $requete= '
-        
-                INSERT INTO utilisateurs(username, password, nom, prenom) VALUES (:username, :password, NULL, NULL)'; 
-    
-            $requeteInsertion = $mysqlClient->prepare($requete);
-            $requeteInsertion->execute(array(':username' => $nomUtilisateur, ':password' => $passwd));
-    
-            $is_registered = true;
+            $newUser = [
+                'new_username' => $nomUtilisateur,
+                'new_password' => $passwd,
+                'new_age' => $_POST['age']
+            ];
+            $is_registered = inscriptionUtilisateur($mysqlClient,$newUser);
         }
 
     ?>
