@@ -1,7 +1,7 @@
 # DBSF - Initiation à PHP
 
 
- Resources pour le cours d'Initiation PHP-DBSF
+ Resources pour le cours d'Initiation PHP
  Ce cours est inspiré du cours en ligne sur [OpenClassRooms:Concevez-votre-site-avec-PHP-MySQL]( https://openclassrooms.com/fr/courses/918836-concevez-votre-site-web-avec-php-et-mysql)
 
 
